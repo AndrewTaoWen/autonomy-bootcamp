@@ -77,7 +77,7 @@ optimizer = optim.Adam(net.parameters(), lr=0.001)
 # Load model if it exists
 if os.path.exists('model_state_dict.pth'):
     print("Loading existing model")
-    net.load_state_dict(torch.load('model_state_dict.pth'))
+    net.load_state_dict(torch.load('model_state_dict.pth', weights_only=True))
     net.train()
 
 
